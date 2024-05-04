@@ -14,27 +14,6 @@ const listingSchema = new mongoose.Schema(
     regularPrice: {
       type: Number,
     },
-    discountPrice: {
-      type: Number,
-    },
-    bathrooms: {
-      type: Number,
-    },
-    bedrooms: {
-      type: Number,
-    },
-    furnished: {
-      type: Boolean,
-    },
-    parking: {
-      type: Boolean,
-    },
-    type: {
-      type: String,
-    },
-    offer: {
-      type: Boolean,
-    },
     imageUrls: {
       type: Array,
     },

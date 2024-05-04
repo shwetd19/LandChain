@@ -25,9 +25,14 @@ export default function SignUp() {
     return re.test(password);
   };
 
+  const validateAadhar = (aadhar) => {
+    const re = /^\d{4}-\d{4}-\d{4}$/;
+    return re.test(aadhar);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { email, password } = formData;
+    const { email, password, aadhar } = formData;
 
     if (!validateEmail(email)) {
       setError("Please enter a valid email address.");
@@ -36,6 +41,11 @@ export default function SignUp() {
 
     if (!validatePassword(password)) {
       setError("Password must contain at least one lowercase letter, one uppercase letter, one number, and be at least 8 characters long.");
+      return;
+    }
+
+    if (!validateAadhar(aadhar)) {
+      setError("Please enter a valid Aadhar card number in the format XXXX-XXXX-XXXX.");
       return;
     }
 
@@ -87,6 +97,13 @@ export default function SignUp() {
           placeholder='Password'
           className='border p-3 rounded-lg'
           id='password'
+          onChange={handleChange}
+        />
+        <input
+          type='text'
+          placeholder='Aadhar Card'
+          className='border p-3 rounded-lg'
+          id='aadhar'
           onChange={handleChange}
         />
 
