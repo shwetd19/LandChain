@@ -7,7 +7,7 @@ export default function About() {
         About Land Chain
       </h1>
       <p className="mb-4 text-slate-700">
-        Block chain for17 Land Registry: Develop a block chain application to
+        Block chain for Land Registry: Develop a block chain application to
         securely store land registry records, preventing fraud and reducing
         administrative burdens.
       </p>
